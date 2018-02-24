@@ -11866,7 +11866,21 @@ a.anchor-link {
  <td> <a href="https://github.com/JuliaOpt/JuMP.jl"><img src="figures/jump.png" alt="IJulia" style="max-height: 150px;"/></a></td>
 <td> <a href="http://jupyter.org"><img src="figures/jupyter.png" alt="Jupyter" style="max-height: 150px;"/></a></td>
 </tr></table><h3 id="Sebastien-Martin"><em>Sebastien Martin</em><a class="anchor-link" href="#Sebastien-Martin">&#182;</a></h3><p>PhD Candidate in Operations Research, MIT Sloan.</p>
-<p><em>Website</em>: <strong><a href="http://sebmart.github.io">http://sebmart.github.io</a></strong></p>
+<p><strong><a href="http://sebmart.github.io">http://sebmart.github.io</a></strong></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Following-the-presentation-in-real-time">Following the presentation in real-time<a class="anchor-link" href="#Following-the-presentation-in-real-time">&#182;</a></h1><ul>
+<li>This notebook (and slides) are available at:</li>
+</ul>
+<blockquote><p><strong><a href="sebmart.github.io/ssac2018">sebmart.github.io/ssac2018</a></strong></p>
+</blockquote>
 
 </div>
 </div>
@@ -11897,29 +11911,37 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For example, to get the sum of all the squares of all the numbers than 1 million:</p>
-
-</div>
-</div>
-</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">sum</span><span class="p">(</span><span class="n">n</span><span class="o">^</span><span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">1_000_000</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">sum</span><span class="p">((</span><span class="mi">1</span><span class="o">:</span><span class="mi">1_000_000</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div></div></section></section><section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[87]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>333333833333500000</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11951,10 +11973,10 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A language for <strong>technical computing</strong>:</p>
 <ul>
-<li>Julia has a lot of built in functions for scientific computing.</li>
-<li>A growing number of packages, mostly written in Julia itself.</li>
-<li>Powerful editors like <em>Jupyter</em> (used for this presentation)</li>
-<li>More and more users in Finance, Biology, Optimization, Analytics...</li>
+<li>Julia has a lot of built in functions for <strong>scientific</strong> computing.</li>
+<li>A growing number of <strong>packages</strong>, mostly written in Julia itself.</li>
+<li>Powerful <strong>editors</strong> like <em>Jupyter</em> (used for this presentation)</li>
+<li>More and more users in <strong>Finance, Biology, Optimization, Analytics</strong>...</li>
 </ul>
 
 </div>
@@ -11973,7 +11995,7 @@ a.anchor-link {
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
@@ -11990,7 +12012,7 @@ a.anchor-link {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[127]:</div>
+<div class="prompt output_prompt">Out[88]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12088,17 +12110,20 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="The-data">The data<a class="anchor-link" href="#The-data">&#182;</a></h2><ul>
-<li>Our Analytics team gave us estimated <strong>performance and cost of 26 players</strong>.</li>
+<li><strong>26 players</strong>.</li>
+<li>Each player has a <strong>cost</strong>.</li>
 <li>We have a limited <strong>budget</strong>.</li>
-<li>Let's use JuMP to <strong>build the best team</strong> of 5 (the one with maximum total performance within the budget).</li>
+<li>Our Analytics team gave us a <strong>performance</strong> forecast for each player.</li>
 </ul>
+<p>Let's use JuMP to <strong>build the best team</strong> of 5.
+(maximum total performance within the budget)</p>
 
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">players</span>
@@ -12113,7 +12138,7 @@ a.anchor-link {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[131]:</div>
+<div class="prompt output_prompt">Out[90]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12125,7 +12150,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12138,7 +12163,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="n">GurobiSolver</span><span class="p">())</span>
@@ -12154,7 +12179,7 @@ a.anchor-link {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[132]:</div>
+<div class="prompt output_prompt">Out[91]:</div>
 
 
 
@@ -12174,8 +12199,8 @@ $$ choosePlayer_{i} \in \{0,1\} \quad\forall i \in \{1,2,\dots,25,26\} $$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Constraints">Constraints<a class="anchor-link" href="#Constraints">&#182;</a></h2><ul>
-<li>We need to choose 5 players, no more no less</li>
-<li>We need to respect a budget (here 1M dollars)</li>
+<li>We need to choose <strong>exactly 5 players</strong>.</li>
+<li>We need to respect a <strong>budget</strong>. (here 1M dollars)</li>
 </ul>
 
 </div>
@@ -12183,7 +12208,7 @@ $$ choosePlayer_{i} \in \{0,1\} \quad\forall i \in \{1,2,\dots,25,26\} $$
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@constraint</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">teamwith5players</span><span class="p">,</span> <span class="n">sum</span><span class="p">(</span><span class="n">choosePlayer</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
@@ -12198,7 +12223,7 @@ $$ choosePlayer_{i} \in \{0,1\} \quad\forall i \in \{1,2,\dots,25,26\} $$
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[133]:</div>
+<div class="prompt output_prompt">Out[92]:</div>
 
 
 
@@ -12214,7 +12239,7 @@ $$ choosePlayer_{1} + choosePlayer_{2} + choosePlayer_{3} + choosePlayer_{4} + c
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">BUDGET</span> <span class="o">=</span> <span class="mi">1_000_000</span> <span class="c"># budget of 1 million dollars</span>
@@ -12230,7 +12255,7 @@ $$ choosePlayer_{1} + choosePlayer_{2} + choosePlayer_{3} + choosePlayer_{4} + c
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[134]:</div>
+<div class="prompt output_prompt">Out[93]:</div>
 
 
 
@@ -12256,7 +12281,7 @@ $$ 610000 choosePlayer_{1} + 230000 choosePlayer_{2} + 770000 choosePlayer_{3} +
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@objective</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Max</span><span class="p">,</span> <span class="n">sum</span><span class="p">(</span><span class="n">choosePlayer</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="n">players</span><span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="o">:</span><span class="n">Performance</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">players</span><span class="p">)))</span>
@@ -12271,7 +12296,7 @@ $$ 610000 choosePlayer_{1} + 230000 choosePlayer_{2} + 770000 choosePlayer_{3} +
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[135]:</div>
+<div class="prompt output_prompt">Out[94]:</div>
 
 
 
@@ -12297,7 +12322,7 @@ $$ 45 choosePlayer_{1} + 27 choosePlayer_{2} + 64 choosePlayer_{3} + 25 choosePl
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
@@ -12356,7 +12381,7 @@ Best objective 1.260000000000e+02, best bound 1.260000000000e+02, gap 0.0000%
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[136]:</div>
+<div class="prompt output_prompt">Out[95]:</div>
 
 
 
@@ -12372,10 +12397,10 @@ Best objective 1.260000000000e+02, best bound 1.260000000000e+02, gap 0.0000%
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">team</span> <span class="o">=</span> <span class="n">players</span><span class="p">[[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">players</span><span class="p">)</span> <span class="k">if</span> <span class="n">getvalue</span><span class="p">(</span><span class="n">choosePlayer</span><span class="p">[</span><span class="n">p</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span><span class="p">],</span><span class="o">:</span><span class="p">]</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">bestTeam</span>
 </pre></div>
 
 </div>
@@ -12387,7 +12412,7 @@ Best objective 1.260000000000e+02, best bound 1.260000000000e+02, gap 0.0000%
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[137]:</div>
+<div class="prompt output_prompt">Out[97]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12402,11 +12427,11 @@ Best objective 1.260000000000e+02, best bound 1.260000000000e+02, gap 0.0000%
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Total Cost: </span><span class="se">\$</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">(</span><span class="n">team</span><span class="p">[</span><span class="o">:</span><span class="n">Cost</span><span class="p">]))</span>
-<span class="n">println</span><span class="p">(</span><span class="s">&quot;Total Performance: &quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">(</span><span class="n">team</span><span class="p">[</span><span class="o">:</span><span class="n">Performance</span><span class="p">]))</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Total Cost: </span><span class="se">\$</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">(</span><span class="n">bestTeam</span><span class="p">[</span><span class="o">:</span><span class="n">Cost</span><span class="p">]))</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Total Performance: &quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">(</span><span class="n">bestTeam</span><span class="p">[</span><span class="o">:</span><span class="n">Performance</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -12421,9 +12446,9 @@ Best objective 1.260000000000e+02, best bound 1.260000000000e+02, gap 0.0000%
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>
+<pre>Total Cost: $1000000
 Total Performance: 126
-Total Cost: $1000000</pre>
+</pre>
 </div>
 </div>
 
@@ -12443,13 +12468,13 @@ Total Cost: $1000000</pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[140]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@manipulate</span> <span class="k">for</span> <span class="n">budget</span> <span class="kp">in</span> <span class="mi">100_000</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">50</span><span class="p">)</span>
-    <span class="n">team</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">teams</span><span class="p">[</span><span class="n">findfirst</span><span class="p">(</span><span class="n">budgets</span><span class="p">,</span><span class="n">budget</span><span class="p">)])</span>
-    <span class="n">push!</span><span class="p">(</span><span class="n">team</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;Total&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">(</span><span class="n">team</span><span class="p">[</span><span class="o">:</span><span class="n">Performance</span><span class="p">]),</span> <span class="n">sum</span><span class="p">(</span><span class="n">team</span><span class="p">[</span><span class="o">:</span><span class="n">Cost</span><span class="p">])])</span>
-    <span class="n">team</span>
+    <span class="n">myteam</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">bestteams</span><span class="p">[</span><span class="n">findfirst</span><span class="p">(</span><span class="n">budgets</span><span class="p">,</span><span class="n">budget</span><span class="p">)])</span>
+    <span class="n">push!</span><span class="p">(</span><span class="n">myteam</span><span class="p">,</span> <span class="p">[</span><span class="s">&quot;Total&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">(</span><span class="n">myteam</span><span class="p">[</span><span class="o">:</span><span class="n">Performance</span><span class="p">]),</span> <span class="n">sum</span><span class="p">(</span><span class="n">myteam</span><span class="p">[</span><span class="o">:</span><span class="n">Cost</span><span class="p">])])</span>
+    <span class="n">myteam</span>
 <span class="k">end</span>
 </pre></div>
 
@@ -12469,13 +12494,13 @@ Total Cost: $1000000</pre>
 
  
  
-<div id="4ab4aa25-b892-42a8-b113-3614de1d7dea"></div>
+<div id="ad52d9be-5f9e-4032-ba47-6ed59aa719b4"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#4ab4aa25-b892-42a8-b113-3614de1d7dea');
+var element = $('#ad52d9be-5f9e-4032-ba47-6ed59aa719b4');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "5ad7fc63-a6e3-4915-84fb-66d2a1dbbf7a", "version_major": 2, "version_minor": 0}
+{"model_id": "f3e63c22-8ccf-482d-8dc0-644c49c314c3", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -12492,7 +12517,7 @@ var element = $('#4ab4aa25-b892-42a8-b113-3614de1d7dea');
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[140]:</div>
+<div class="prompt output_prompt">Out[100]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12507,11 +12532,11 @@ var element = $('#4ab4aa25-b892-42a8-b113-3614de1d7dea');
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[141]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">performances</span> <span class="o">=</span> <span class="p">[</span><span class="n">sum</span><span class="p">(</span><span class="n">team</span><span class="p">[</span><span class="o">:</span><span class="n">Performance</span><span class="p">])</span> <span class="k">for</span> <span class="n">team</span> <span class="kp">in</span> <span class="n">teams</span><span class="p">]</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">budgets</span><span class="p">,</span> <span class="n">performances</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ylims</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">350</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">&quot;Budget (dollars)&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Performance&quot;</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">performances</span> <span class="o">=</span> <span class="p">[</span><span class="n">sum</span><span class="p">(</span><span class="n">team</span><span class="p">[</span><span class="o">:</span><span class="n">Performance</span><span class="p">])</span> <span class="k">for</span> <span class="n">team</span> <span class="kp">in</span> <span class="n">bestteams</span><span class="p">]</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">budgets</span><span class="p">,</span> <span class="n">performances</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ylims</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">350</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">&quot;Budget (dollars)&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Performance&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="mi">400</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12523,11 +12548,11 @@ var element = $('#4ab4aa25-b892-42a8-b113-3614de1d7dea');
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[141]:</div>
+<div class="prompt output_prompt">Out[101]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<img src="data:image/png;base64,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H7/99ttKTk6OqN8ffreku+66S9u2bVNOTo5ycnLUsmVLffDBBxo5cmTEjAXj9Iv9+/drz549/sezZs1S586dI2pMqjReVaw3Q5S74YYbTIsWLYzT6TRNmzb1F05/9913pnv37qZt27bmjDPOMOvWrfM/J5K21RW5ublGksnIyDCnnXaaOe2000zXrl2NMcZs377dDBgwwLRp08a0b9/efPTRR/7nRdK2umTr1q2mS5cupmPHjubUU081/fr1M2vWrDHGRNbvD79bdr8uoI6ksWCcDtu8ebPJysoynTp1Mh07djQXXHCBv3g8ksbkaOPFQqMAAAAhxilCAACAECNgAQAAhBgBCwAAIMQIWAAAACFGwAIAAAgxAhYAAECIEbCAOmDixImyLMv/FR8frw4dOuiJJ54I6e04GjRooIkTJ4bs9X7to48+0uTJk4/pOV26dNFTTz11xH0+//xzWZaljz766Jhee+LEiWrQoIH/cU5OjizL0uzZs4/pdX6rvXv3KikpSR9//HFYjgfg2BCwgDoiPj5eK1eu1MqVK/Xee+/p/PPP12233eZfkT3SHWvAeuutt/Tjjz/qz3/+czX2quY0bNhQN954o+6+++6a7gqAIAhYQB3hcDjUvXt3de/eXX379tWUKVPUp08fvfXWWzXdtWrxxBNP6LLLLlN8fHxNd+WYlZaWVmm/q6++WsuXL9eaNWuquUcAjhUBC6jDGjZsqPLycv/jjz76SJZl6fPPP7ftd95556l37962tnfeeUft2rVTXFycunbtquzs7IDXN8bowQcfVLNmzdSgQQP9/ve/17x58wJOyRljNHXqVGVmZio2NlYZGRmaNm2af/vEiRP1wAMPaP/+/f7TnBX782s//PCDli9frosvvjhg26RJk2z92bFjR8A+paWluv3229WiRQvFxsaqU6dOeu211yo9XmVmzpypM888U0lJSTrhhBPUu3dvrVq1yrbPz6caV61apR49eiguLk5PP/20JGnKlClq06aN4uLilJqaqv79+2vLli3+55500kk644wzNGPGjGPuG4Dq5arpDgAIH4/HI0k6cOCAFixYoPnz5+tvf/vbMb/O2rVrNXz4cA0ePFiPP/64fvjhB/3hD3+whTVJevrppzVx4kSNHTtWffv21eLFi3XdddcFvN5f/vIXPf/887r33nvVrVs3ffLJJxo3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" />
+<img src="data:image/png;base64,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" />
 </div>
 
 </div>
@@ -12567,28 +12592,40 @@ var element = $('#4ab4aa25-b892-42a8-b113-3614de1d7dea');
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Setting">Setting<a class="anchor-link" href="#Setting">&#182;</a></h2><p>2018 NFL scheduling (simplified) problem</p>
 <ul>
-<li><strong>32</strong> teams</li>
-<li><strong>256</strong> games (16 for each team)</li>
-<li><strong>17</strong> weeks</li>
-<li>1 Sunday Night game each week.</li>
+<li><strong>32 teams</strong>.</li>
+<li><strong>256</strong> games (16 per team)</li>
+<li><strong>17 weeks</strong>, no more than 1 game per week per team.</li>
+<li><strong>1 Sunday Night</strong> game each week.</li>
 </ul>
 <p><em>When should each game be played?</em></p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data">Data<a class="anchor-link" href="#Data">&#182;</a></h2>
+<h2 id="Data">Data<a class="anchor-link" href="#Data">&#182;</a></h2><ul>
+<li>Estimated <strong>Interest</strong> for each game (potential TV revenues)</li>
+<li>Scheduling <strong>preferences</strong> for each game.
+Scores between 0 and 100.<blockquote><p><em>We made up the data, you can expect surprising results</em></p>
+</blockquote>
+</li>
+</ul>
+<p>We want to :</p>
+<ul>
+<li>Put <strong>high interest games on Sunday night</strong></li>
+<li>As a second objective, follow <strong>teams preferences</strong>.</li>
+</ul>
+
 </div>
 </div>
-</div><div class="fragment">
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">NFL2018games</span>
@@ -12603,7 +12640,7 @@ var element = $('#4ab4aa25-b892-42a8-b113-3614de1d7dea');
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[91]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12615,7 +12652,7 @@ var element = $('#4ab4aa25-b892-42a8-b113-3614de1d7dea');
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12631,7 +12668,7 @@ var element = $('#4ab4aa25-b892-42a8-b113-3614de1d7dea');
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="n">GurobiSolver</span><span class="p">())</span>
@@ -12648,7 +12685,7 @@ var element = $('#4ab4aa25-b892-42a8-b113-3614de1d7dea');
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[114]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -12668,9 +12705,9 @@ $$ sundayNightGame_{i,j} \in \{0,1\} \quad\forall i \in \{("Bills", "Bears"),("B
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Constraints">Constraints<a class="anchor-link" href="#Constraints">&#182;</a></h2><ul>
-<li>Teams cannot have more than one game each week (1 week off).</li>
+<li>No more than <strong>one game each week per team</strong> (each team has 1 week off).</li>
 <li>Each game has to be played and played only once.</li>
-<li>Only one game can be played on Sunday night each week.</li>
+<li><strong>Only one Sunday night game</strong> each week.</li>
 <li>A game can be the week's Sunday night's game only if it is played that week.</li>
 </ul>
 
@@ -12679,7 +12716,7 @@ $$ sundayNightGame_{i,j} \in \{0,1\} \quad\forall i \in \{("Bills", "Bears"),("B
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@constraint</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">maxOneGamePerTeamPerWeek</span><span class="p">[</span><span class="n">team</span> <span class="kp">in</span> <span class="n">teams</span><span class="p">,</span> <span class="n">week</span> <span class="kp">in</span> <span class="n">weeks</span><span class="p">],</span> <span class="n">sum</span><span class="p">(</span><span class="n">gameAtWeek</span><span class="p">[</span><span class="n">game</span><span class="p">,</span> <span class="n">week</span><span class="p">]</span> <span class="k">for</span> <span class="n">game</span> <span class="kp">in</span> <span class="n">gamesOfTeam</span><span class="p">[</span><span class="n">team</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
@@ -12708,7 +12745,7 @@ $$ sundayNightGame_{i,j} \in \{0,1\} \quad\forall i \in \{("Bills", "Bears"),("B
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@objective</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Max</span><span class="p">,</span> 
@@ -12728,8 +12765,8 @@ $$ sundayNightGame_{i,j} \in \{0,1\} \quad\forall i \in \{("Bills", "Bears"),("B
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Solving">Solving<a class="anchor-link" href="#Solving">&#182;</a></h2><ul>
-<li>Very hard problem: 8704 decisions to be made!</li>
-<li>State of the art solvers can nonetheless find the very best solution (~100s on this computer)</li>
+<li>Very hard problem: <strong>8704 decisions</strong> to be made!</li>
+<li>State of the art solvers can nonetheless find the very best solution (~<strong>3 minutes</strong> on this computer)</li>
 </ul>
 
 </div>
@@ -12737,7 +12774,7 @@ $$ sundayNightGame_{i,j} \in \{0,1\} \quad\forall i \in \{("Bills", "Bears"),("B
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
@@ -12755,7 +12792,7 @@ $$ sundayNightGame_{i,j} \in \{0,1\} \quad\forall i \in \{("Bills", "Bears"),("B
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Optimize a model with 10338 rows, 8704 columns and 52224 nonzeros
+<pre>Optimize a model with 5169 rows, 8704 columns and 26112 nonzeros
 Variable types: 0 continuous, 8704 integer (8704 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
@@ -12763,89 +12800,86 @@ Coefficient statistics:
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 1e+00]
 Found heuristic solution: objective 430920
-Presolve removed 5169 rows and 0 columns
-Presolve time: 0.16s
+Presolve time: 0.05s
 Presolved: 5169 rows, 8704 columns, 26112 nonzeros
 Variable types: 0 continuous, 8704 integer (8704 binary)
 
-Root relaxation: objective 1.177935e+06, 3347 iterations, 0.80 seconds
+Root relaxation: objective 1.177935e+06, 3327 iterations, 0.91 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0 1177935.37    0  654 430920.000 1177935.37   173%     -    1s
-H    0     0                    1141497.0000 1177935.37  3.19%     -    1s
-H    0     0                    1146932.0000 1177935.37  2.70%     -    1s
-H    0     0                    1177393.0000 1177935.37  0.05%     -    1s
-     0     0 1177930.39    0  642 1177393.00 1177930.39  0.05%     -    3s
-     0     0 1177930.39    0  612 1177393.00 1177930.39  0.05%     -    4s
-     0     0 1177927.98    0  611 1177393.00 1177927.98  0.05%     -    6s
-     0     0 1177926.10    0  606 1177393.00 1177926.10  0.05%     -    7s
-     0     0 1177925.47    0  615 1177393.00 1177925.47  0.05%     -    7s
-     0     0 1177925.47    0  615 1177393.00 1177925.47  0.05%     -    7s
-     0     2 1177925.47    0  615 1177393.00 1177925.47  0.05%     -    8s
-    29    32 1177903.81    7  595 1177393.00 1177915.52  0.04%   192   10s
-H   32    34                    1177414.0000 1177915.52  0.04%   176   10s
-   345   346 1177852.70   96  578 1177414.00 1177915.52  0.04%   117   15s
-H  769   771                    1177423.0000 1177915.52  0.04%  89.9   22s
-H  772   774                    1177467.0000 1177915.52  0.04%  89.7   22s
-  1098  1098 1177722.43  327  406 1177467.00 1177915.52  0.04%  85.3   25s
-  2740  2708 1177871.96    8  613 1177467.00 1177912.62  0.04%  61.6   30s
-H 2831  2725                    1177476.0000 1177912.62  0.04%  62.2   30s
-H 3510  3096                    1177543.0000 1177912.62  0.03%  65.5   35s
-  3513  3098 1177844.77   98  612 1177543.00 1177912.62  0.03%  65.5   40s
-  3517  3101 1177784.05  213  621 1177543.00 1177912.62  0.03%  65.4   45s
-H 3518  2946                    1177600.0000 1177912.62  0.03%  65.4   48s
-  3520  2950 1177912.62   12  634 1177600.00 1177912.62  0.03%  66.4   53s
-  3522  2953 1177912.62   13  614 1177600.00 1177912.62  0.03%  66.6   60s
-  3629  3023 1177892.01   20  595 1177600.00 1177903.39  0.03%  70.8   67s
-  3711  3070 1177889.90   24  594 1177600.00 1177902.51  0.03%  73.3   71s
-  3984  3258 1177873.93   33  551 1177600.00 1177902.51  0.03%  78.3   75s
-H 3988  3110                    1177616.0000 1177902.51  0.02%  78.5   75s
-H 4047  3009                    1177622.0000 1177902.51  0.02%  80.6   75s
-  4344  3210 1177860.05   48  588 1177622.00 1177902.51  0.02%  84.9   81s
-H 4453  3125                    1177652.0000 1177902.51  0.02%  88.5   81s
-H 4453  2943                    1177728.0000 1177902.51  0.01%  88.5   81s
-* 4460  2801              91    1177749.0000 1177902.51  0.01%  88.9   81s
-  4612  2827 1177855.04   58  581 1177749.00 1177902.51  0.01%  89.3   85s
-  4835  2942 1177832.67   68  580 1177749.00 1177902.51  0.01%  92.0   91s
-  5550  3328 1177803.14   92  566 1177749.00 1177902.51  0.01%  95.4   97s
-  6430  3780 1177807.91   48  502 1177749.00 1177900.65  0.01%  95.6  102s
-  6591  3884 1177776.99   58  481 1177749.00 1177896.95  0.01%  95.6  114s
-  6866  4031 1177837.00   40  527 1177749.00 1177895.22  0.01%  95.5  118s
-  7374  4326 1177774.05  101  475 1177749.00 1177895.18  0.01%  95.4  121s
-  7789  4549 1177857.52   27  573 1177749.00 1177895.18  0.01%  95.7  125s
-  8641  5029 1177758.54   69  438 1177749.00 1177892.25  0.01%  97.4  135s
-* 8643  4668              71    1177758.0000 1177892.25  0.01%  97.4  135s
-  9539  5102 1177766.83   56  528 1177758.00 1177888.74  0.01%   100  143s
- 10004  5322 1177788.49   78  599 1177758.00 1177887.87  0.01%   100  147s
- 10502  5761 1177798.56   59  454 1177758.00 1177886.89  0.01%   101  151s
- 10768  6001 1177837.96   26  577 1177758.00 1177886.89  0.01%   102  171s
- 10972  6145 1177793.33   42  577 1177758.00 1177886.60  0.01%   102  175s
- 11991  6976 1177834.48   28  610 1177758.00 1177885.28  0.01%   105  184s
-*12087  6479             106    1177767.0000 1177885.25  0.01%   105  184s
- 12571  6902 1177809.50   42  560 1177767.00 1177884.61  0.01%   105  189s
+     0     0 1177935.37    0  654 430920.000 1177935.37   173%     -    0s
+H    0     0                    1092885.0000 1177935.37  7.78%     -    1s
+H    0     0                    1140749.0000 1177935.37  3.26%     -    1s
+H    0     0                    1177389.0000 1177935.37  0.05%     -    1s
+     0     0 1177930.39    0  642 1177389.00 1177930.39  0.05%     -    3s
+     0     0 1177930.39    0  612 1177389.00 1177930.39  0.05%     -    4s
+     0     0 1177927.98    0  611 1177389.00 1177927.98  0.05%     -    6s
+     0     0 1177926.11    0  613 1177389.00 1177926.11  0.05%     -    7s
+     0     0 1177926.10    0  607 1177389.00 1177926.10  0.05%     -    7s
+     0     0 1177925.28    0  626 1177389.00 1177925.28  0.05%     -    8s
+     0     0 1177925.28    0  625 1177389.00 1177925.28  0.05%     -    8s
+     0     2 1177925.28    0  625 1177389.00 1177925.28  0.05%     -    8s
+    27    27 1177907.65    6  621 1177389.00 1177912.41  0.04%   221   10s
+H   29    29                    1177401.0000 1177912.41  0.04%   212   10s
+H  421   424                    1177450.0000 1177912.41  0.04%   110   17s
+   617   620 1177803.38  141  527 1177450.00 1177912.41  0.04%   104   20s
+  1461  1461 1177659.78  342  342 1177450.00 1177912.41  0.04%  88.6   25s
+  2407  2348 1177845.64   11  558 1177450.00 1177908.86  0.04%  85.7   30s
+H 2465  2293                    1177506.0000 1177908.86  0.03%  88.5   30s
+  2794  2633 1177757.90   57  389 1177506.00 1177908.86  0.03%  95.2   35s
+H 2924  1921                    1177648.0000 1177908.86  0.02%  96.5   37s
+  2927  1923 1177742.81  257  612 1177648.00 1177908.86  0.02%  96.4   41s
+  2929  1925 1177857.85   37  610 1177648.00 1177908.86  0.02%  96.3   45s
+  2931  1926 1177755.21   53  610 1177648.00 1177908.86  0.02%  96.3   50s
+  2932  1930 1177908.86   12  606 1177648.00 1177908.86  0.02%  97.4   57s
+  2934  1933 1177908.86   13  623 1177648.00 1177908.86  0.02%  97.7   64s
+  2938  1940 1177906.51   14  607 1177648.00 1177908.86  0.02%  97.9   65s
+H 2968  1857                    1177684.0000 1177908.86  0.02%  98.9   67s
+  3009  1880 1177888.97   19  574 1177684.00 1177908.86  0.02%   101   88s
+H 3013  1794                    1177712.0000 1177908.86  0.02%   101   88s
+  3091  1845 1177883.37   24  576 1177712.00 1177908.86  0.02%   103   93s
+  3295  1973 1177855.80   32  492 1177712.00 1177908.86  0.02%   107   97s
+  3692  2226 1177840.82   50  454 1177712.00 1177908.86  0.02%   111  100s
+* 4090  2317             116    1177743.0000 1177908.86  0.01%   116  102s
+  4206  2332 1177820.08   76  379 1177743.00 1177908.86  0.01%   116  105s
+  4819  2637     cutoff  103      1177743.00 1177908.86  0.01%   121  110s
+* 5134  2679             126    1177746.0000 1177908.86  0.01%   123  113s
+  5417  2808 1177856.39   31  577 1177746.00 1177908.86  0.01%   125  116s
+  5858  3059 1177874.39   22  558 1177746.00 1177903.70  0.01%   128  122s
+  6260  3254 1177790.04   83  498 1177746.00 1177900.30  0.01%   129  125s
+* 6802  3017              88    1177761.0000 1177900.12  0.01%   128  128s
+  7048  3078 1177761.12   91  478 1177761.00 1177898.08  0.01%   128  131s
+  7970  3660 1177808.66   65  529 1177761.00 1177892.12  0.01%   128  137s
+  8379  3999 1177830.19   38  549 1177761.00 1177892.03  0.01%   128  140s
+* 9129  4327              89    1177769.0000 1177890.27  0.01%   129  144s
+  9250  4469 1177784.22   67  535 1177769.00 1177889.88  0.01%   129  147s
+  9541  4695 1177812.62   42  529 1177769.00 1177889.61  0.01%   129  151s
+ 10042  5102 1177798.35   59  520 1177769.00 1177888.93  0.01%   130  156s
+ 10607  5531 1177810.04   70  533 1177769.00 1177888.62  0.01%   129  161s
+ 11216  6039 1177831.02   36  433 1177769.00 1177887.36  0.01%   129  166s
+ 11775  6499 1177793.14   87  403 1177769.00 1177887.00  0.01%   129  171s
+ 12407  7042 1177771.70   42  497 1177769.00 1177886.25  0.01%   129  176s
 
 Cutting planes:
   Gomory: 3
-  Clique: 21
-  Inf proof: 1
-  Zero half: 8
+  Clique: 18
 
-Explored 13152 nodes (1404367 simplex iterations) in 189.87 seconds
+Explored 12924 nodes (1683735 simplex iterations) in 176.60 seconds
 Thread count was 8 (of 8 available processors)
 
-Solution count 10: 1.17777e+06 1.17776e+06 1.17775e+06 ... 1.17748e+06
-Pool objective bound 1.17788e+06
+Solution count 10: 1.17777e+06 1.17776e+06 1.17775e+06 ... 1.1774e+06
+Pool objective bound 1.17789e+06
 
 Optimal solution found (tolerance 1.00e-04)
-Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
+Best objective 1.177769000000e+06, best bound 1.177886000000e+06, gap 0.0099%
 </pre>
 </div>
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[119]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -12871,7 +12905,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">scheduledGames</span>
@@ -12886,11 +12920,11 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[121]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<table class="data-frame"><thead><tr><th></th><th>Home</th><th>Away</th><th>Week</th><th>SundayNight</th><th>Preference</th></tr></thead><tbody><tr><th>1</th><td>Bills</td><td>Bears</td><td>11</td><td>0</td><td>22</td></tr><tr><th>2</th><td>Bills</td><td>Lions</td><td>13</td><td>0</td><td>21</td></tr><tr><th>3</th><td>Bills</td><td>Jaguars</td><td>15</td><td>0</td><td>37</td></tr><tr><th>4</th><td>Bills</td><td>Chargers</td><td>1</td><td>0</td><td>93</td></tr><tr><th>5</th><td>Bills</td><td>Dolphins</td><td>17</td><td>0</td><td>3</td></tr><tr><th>6</th><td>Bills</td><td>Patriots</td><td>12</td><td>0</td><td>46</td></tr><tr><th>7</th><td>Bills</td><td>Jets</td><td>6</td><td>55</td><td>16</td></tr><tr><th>8</th><td>Bills</td><td>Titans</td><td>14</td><td>51</td><td>14</td></tr><tr><th>9</th><td>Dolphins</td><td>Bills</td><td>9</td><td>0</td><td>30</td></tr><tr><th>10</th><td>Dolphins</td><td>Bears</td><td>3</td><td>0</td><td>15</td></tr><tr><th>11</th><td>Dolphins</td><td>Lions</td><td>14</td><td>0</td><td>35</td></tr><tr><th>12</th><td>Dolphins</td><td>Jaguars</td><td>5</td><td>0</td><td>19</td></tr><tr><th>13</th><td>Dolphins</td><td>Patriots</td><td>7</td><td>0</td><td>27</td></tr><tr><th>14</th><td>Dolphins</td><td>Jets</td><td>2</td><td>0</td><td>14</td></tr><tr><th>15</th><td>Dolphins</td><td>Raiders</td><td>15</td><td>0</td><td>19</td></tr><tr><th>16</th><td>Dolphins</td><td>Titans</td><td>10</td><td>0</td><td>1</td></tr><tr><th>17</th><td>Patriots</td><td>Bills</td><td>8</td><td>0</td><td>2</td></tr><tr><th>18</th><td>Patriots</td><td>Packers</td><td>5</td><td>0</td><td>53</td></tr><tr><th>19</th><td>Patriots</td><td>Texans</td><td>15</td><td>0</td><td>10</td></tr><tr><th>20</th><td>Patriots</td><td>Colts</td><td>10</td><td>0</td><td>23</td></tr><tr><th>21</th><td>Patriots</td><td>Dolphins</td><td>4</td><td>0</td><td>20</td></tr><tr><th>22</th><td>Patriots</td><td>Vikings</td><td>6</td><td>0</td><td>57</td></tr><tr><th>23</th><td>Patriots</td><td>Jets</td><td>17</td><td>0</td><td>30</td></tr><tr><th>24</th><td>Patriots</td><td>Chiefs</td><td>9</td><td>0</td><td>34</td></tr><tr><th>25</th><td>Jets</td><td>Bills</td><td>10</td><td>0</td><td>31</td></tr><tr><th>26</th><td>Jets</td><td>Broncos</td><td>16</td><td>0</td><td>45</td></tr><tr><th>27</th><td>Jets</td><td>Packers</td><td>15</td><td>0</td><td>22</td></tr><tr><th>28</th><td>Jets</td><td>Texans</td><td>11</td><td>0</td><td>16</td></tr><tr><th>29</th><td>Jets</td><td>Colts</td><td>4</td><td>0</td><td>8</td></tr><tr><th>30</th><td>Jets</td><td>Dolphins</td><td>1</td><td>0</td><td>43</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table>
+<table class="data-frame"><thead><tr><th></th><th>Home</th><th>Away</th><th>Week</th><th>SundayNight</th><th>Preference</th></tr></thead><tbody><tr><th>1</th><td>Bills</td><td>Bears</td><td>11</td><td>0</td><td>22</td></tr><tr><th>2</th><td>Bills</td><td>Lions</td><td>14</td><td>0</td><td>34</td></tr><tr><th>3</th><td>Bills</td><td>Jaguars</td><td>10</td><td>0</td><td>24</td></tr><tr><th>4</th><td>Bills</td><td>Chargers</td><td>1</td><td>0</td><td>93</td></tr><tr><th>5</th><td>Bills</td><td>Dolphins</td><td>16</td><td>0</td><td>4</td></tr><tr><th>6</th><td>Bills</td><td>Patriots</td><td>12</td><td>0</td><td>46</td></tr><tr><th>7</th><td>Bills</td><td>Jets</td><td>8</td><td>55</td><td>14</td></tr><tr><th>8</th><td>Bills</td><td>Titans</td><td>15</td><td>51</td><td>1</td></tr><tr><th>9</th><td>Dolphins</td><td>Bills</td><td>9</td><td>0</td><td>30</td></tr><tr><th>10</th><td>Dolphins</td><td>Bears</td><td>3</td><td>0</td><td>15</td></tr><tr><th>11</th><td>Dolphins</td><td>Lions</td><td>17</td><td>0</td><td>34</td></tr><tr><th>12</th><td>Dolphins</td><td>Jaguars</td><td>5</td><td>0</td><td>19</td></tr><tr><th>13</th><td>Dolphins</td><td>Patriots</td><td>1</td><td>0</td><td>13</td></tr><tr><th>14</th><td>Dolphins</td><td>Jets</td><td>2</td><td>0</td><td>14</td></tr><tr><th>15</th><td>Dolphins</td><td>Raiders</td><td>15</td><td>0</td><td>19</td></tr><tr><th>16</th><td>Dolphins</td><td>Titans</td><td>4</td><td>0</td><td>26</td></tr><tr><th>17</th><td>Patriots</td><td>Bills</td><td>4</td><td>0</td><td>36</td></tr><tr><th>18</th><td>Patriots</td><td>Packers</td><td>10</td><td>0</td><td>11</td></tr><tr><th>19</th><td>Patriots</td><td>Texans</td><td>15</td><td>0</td><td>10</td></tr><tr><th>20</th><td>Patriots</td><td>Colts</td><td>8</td><td>0</td><td>16</td></tr><tr><th>21</th><td>Patriots</td><td>Dolphins</td><td>7</td><td>0</td><td>32</td></tr><tr><th>22</th><td>Patriots</td><td>Vikings</td><td>6</td><td>0</td><td>57</td></tr><tr><th>23</th><td>Patriots</td><td>Jets</td><td>17</td><td>0</td><td>30</td></tr><tr><th>24</th><td>Patriots</td><td>Chiefs</td><td>9</td><td>0</td><td>34</td></tr><tr><th>25</th><td>Jets</td><td>Bills</td><td>7</td><td>0</td><td>12</td></tr><tr><th>26</th><td>Jets</td><td>Broncos</td><td>16</td><td>0</td><td>45</td></tr><tr><th>27</th><td>Jets</td><td>Packers</td><td>15</td><td>0</td><td>22</td></tr><tr><th>28</th><td>Jets</td><td>Texans</td><td>4</td><td>0</td><td>12</td></tr><tr><th>29</th><td>Jets</td><td>Colts</td><td>3</td><td>0</td><td>8</td></tr><tr><th>30</th><td>Jets</td><td>Dolphins</td><td>11</td><td>0</td><td>9</td></tr><tr><th>&vellip;</th><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td><td>&vellip;</td></tr></tbody></table>
 </div>
 
 </div>
@@ -12911,7 +12945,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@from</span> <span class="n">i</span> <span class="kp">in</span> <span class="n">scheduledGames</span> <span class="k">begin</span>
@@ -12931,11 +12965,11 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[122]:</div>
+<div class="prompt output_prompt">Out[35]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<table class="data-frame"><thead><tr><th></th><th>Week</th><th>Opponent</th><th>Preference</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>Lions</td><td>12</td></tr><tr><th>2</th><td>3</td><td>Jaguars</td><td>38</td></tr><tr><th>3</th><td>4</td><td>Dolphins</td><td>20</td></tr><tr><th>4</th><td>5</td><td>Packers</td><td>53</td></tr><tr><th>5</th><td>6</td><td>Vikings</td><td>57</td></tr><tr><th>6</th><td>7</td><td>Dolphins</td><td>27</td></tr><tr><th>7</th><td>8</td><td>Bills</td><td>2</td></tr><tr><th>8</th><td>9</td><td>Chiefs</td><td>34</td></tr><tr><th>9</th><td>10</td><td>Colts</td><td>23</td></tr><tr><th>10</th><td>11</td><td>Steelers</td><td>52</td></tr><tr><th>11</th><td>12</td><td>Bills</td><td>46</td></tr><tr><th>12</th><td>13</td><td>Jets</td><td>53</td></tr><tr><th>13</th><td>14</td><td>Bears</td><td>11</td></tr><tr><th>14</th><td>15</td><td>Texans</td><td>10</td></tr><tr><th>15</th><td>16</td><td>Titans</td><td>47</td></tr><tr><th>16</th><td>17</td><td>Jets</td><td>30</td></tr></tbody></table>
+<table class="data-frame"><thead><tr><th></th><th>Week</th><th>Opponent</th><th>Preference</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>Dolphins</td><td>13</td></tr><tr><th>2</th><td>3</td><td>Jaguars</td><td>38</td></tr><tr><th>3</th><td>4</td><td>Bills</td><td>36</td></tr><tr><th>4</th><td>5</td><td>Lions</td><td>18</td></tr><tr><th>5</th><td>6</td><td>Vikings</td><td>57</td></tr><tr><th>6</th><td>7</td><td>Dolphins</td><td>32</td></tr><tr><th>7</th><td>8</td><td>Colts</td><td>16</td></tr><tr><th>8</th><td>9</td><td>Chiefs</td><td>34</td></tr><tr><th>9</th><td>10</td><td>Packers</td><td>11</td></tr><tr><th>10</th><td>11</td><td>Steelers</td><td>52</td></tr><tr><th>11</th><td>12</td><td>Bills</td><td>46</td></tr><tr><th>12</th><td>13</td><td>Jets</td><td>53</td></tr><tr><th>13</th><td>14</td><td>Bears</td><td>11</td></tr><tr><th>14</th><td>15</td><td>Texans</td><td>10</td></tr><tr><th>15</th><td>16</td><td>Titans</td><td>47</td></tr><tr><th>16</th><td>17</td><td>Jets</td><td>30</td></tr></tbody></table>
 </div>
 
 </div>
@@ -12955,7 +12989,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@from</span> <span class="n">i</span> <span class="kp">in</span> <span class="n">scheduledGames</span> <span class="k">begin</span>
@@ -12975,11 +13009,11 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[123]:</div>
+<div class="prompt output_prompt">Out[36]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<table class="data-frame"><thead><tr><th></th><th>Home</th><th>Away</th><th>SundayNightInterest</th></tr></thead><tbody><tr><th>1</th><td>Steelers</td><td>Falcons</td><td>62</td></tr><tr><th>2</th><td>Raiders</td><td>Colts</td><td>100</td></tr><tr><th>3</th><td>Giants</td><td>Saints</td><td>62</td></tr><tr><th>4</th><td>Buccaneers</td><td>49ers</td><td>51</td></tr><tr><th>5</th><td>Saints</td><td>Buccaneers</td><td>61</td></tr><tr><th>6</th><td>Bills</td><td>Jets</td><td>55</td></tr><tr><th>7</th><td>Redskins</td><td>Eagles</td><td>58</td></tr><tr><th>8</th><td>Saints</td><td>Redskins</td><td>65</td></tr><tr><th>9</th><td>Seahawks</td><td>Packers</td><td>99</td></tr><tr><th>10</th><td>Falcons</td><td>Cowboys</td><td>53</td></tr><tr><th>11</th><td>Raiders</td><td>Seahawks</td><td>96</td></tr><tr><th>12</th><td>Raiders</td><td>Chargers</td><td>88</td></tr><tr><th>13</th><td>Browns</td><td>Bengals</td><td>52</td></tr><tr><th>14</th><td>Bills</td><td>Titans</td><td>51</td></tr><tr><th>15</th><td>49ers</td><td>Bears</td><td>59</td></tr><tr><th>16</th><td>Packers</td><td>Bears</td><td>71</td></tr><tr><th>17</th><td>Colts</td><td>Giants</td><td>87</td></tr></tbody></table>
+<table class="data-frame"><thead><tr><th></th><th>Home</th><th>Away</th><th>SundayNightInterest</th></tr></thead><tbody><tr><th>1</th><td>Steelers</td><td>Falcons</td><td>62</td></tr><tr><th>2</th><td>Buccaneers</td><td>49ers</td><td>51</td></tr><tr><th>3</th><td>Saints</td><td>Redskins</td><td>65</td></tr><tr><th>4</th><td>Giants</td><td>Saints</td><td>62</td></tr><tr><th>5</th><td>Saints</td><td>Buccaneers</td><td>61</td></tr><tr><th>6</th><td>Raiders</td><td>Chargers</td><td>88</td></tr><tr><th>7</th><td>Redskins</td><td>Eagles</td><td>58</td></tr><tr><th>8</th><td>Bills</td><td>Jets</td><td>55</td></tr><tr><th>9</th><td>Seahawks</td><td>Packers</td><td>99</td></tr><tr><th>10</th><td>Raiders</td><td>Colts</td><td>100</td></tr><tr><th>11</th><td>Raiders</td><td>Seahawks</td><td>96</td></tr><tr><th>12</th><td>49ers</td><td>Bears</td><td>59</td></tr><tr><th>13</th><td>Browns</td><td>Bengals</td><td>52</td></tr><tr><th>14</th><td>Falcons</td><td>Cowboys</td><td>53</td></tr><tr><th>15</th><td>Bills</td><td>Titans</td><td>51</td></tr><tr><th>16</th><td>Packers</td><td>Bears</td><td>71</td></tr><tr><th>17</th><td>Colts</td><td>Giants</td><td>87</td></tr></tbody></table>
 </div>
 
 </div>
@@ -12999,7 +13033,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@from</span> <span class="n">i</span> <span class="kp">in</span> <span class="n">scheduledGames</span> <span class="k">begin</span>
@@ -13019,11 +13053,11 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[124]:</div>
+<div class="prompt output_prompt">Out[37]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<table class="data-frame"><thead><tr><th></th><th>Home</th><th>Away</th><th>SundayNight</th></tr></thead><tbody><tr><th>1</th><td>Bears</td><td>Buccaneers</td><td>no</td></tr><tr><th>2</th><td>Bengals</td><td>Broncos</td><td>no</td></tr><tr><th>3</th><td>Bills</td><td>Chargers</td><td>no</td></tr><tr><th>4</th><td>Browns</td><td>Panthers</td><td>no</td></tr><tr><th>5</th><td>Cardinals</td><td>Rams</td><td>no</td></tr><tr><th>6</th><td>Chiefs</td><td>Raiders</td><td>no</td></tr><tr><th>7</th><td>Colts</td><td>Titans</td><td>no</td></tr><tr><th>8</th><td>Eagles</td><td>Cowboys</td><td>no</td></tr><tr><th>9</th><td>Giants</td><td>Jaguars</td><td>no</td></tr><tr><th>10</th><td>Jets</td><td>Dolphins</td><td>no</td></tr><tr><th>11</th><td>Lions</td><td>Patriots</td><td>no</td></tr><tr><th>12</th><td>Ravens</td><td>Saints</td><td>no</td></tr><tr><th>13</th><td>Seahawks</td><td>49ers</td><td>no</td></tr><tr><th>14</th><td>Steelers</td><td>Falcons</td><td>yes</td></tr><tr><th>15</th><td>Vikings</td><td>Packers</td><td>no</td></tr></tbody></table>
+<table class="data-frame"><thead><tr><th></th><th>Home</th><th>Away</th><th>SundayNight</th></tr></thead><tbody><tr><th>1</th><td>Bears</td><td>Buccaneers</td><td>no</td></tr><tr><th>2</th><td>Bengals</td><td>Ravens</td><td>no</td></tr><tr><th>3</th><td>Bills</td><td>Chargers</td><td>no</td></tr><tr><th>4</th><td>Browns</td><td>Panthers</td><td>no</td></tr><tr><th>5</th><td>Cardinals</td><td>Rams</td><td>no</td></tr><tr><th>6</th><td>Colts</td><td>Jaguars</td><td>no</td></tr><tr><th>7</th><td>Dolphins</td><td>Patriots</td><td>no</td></tr><tr><th>8</th><td>Eagles</td><td>Cowboys</td><td>no</td></tr><tr><th>9</th><td>Giants</td><td>Redskins</td><td>no</td></tr><tr><th>10</th><td>Lions</td><td>Packers</td><td>no</td></tr><tr><th>11</th><td>Raiders</td><td>Broncos</td><td>no</td></tr><tr><th>12</th><td>Steelers</td><td>Falcons</td><td>yes</td></tr><tr><th>13</th><td>Titans</td><td>Jets</td><td>no</td></tr><tr><th>14</th><td>Vikings</td><td>49ers</td><td>no</td></tr></tbody></table>
 </div>
 
 </div>
@@ -13038,10 +13072,10 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="In-Practice">In Practice<a class="anchor-link" href="#In-Practice">&#182;</a></h2><ul>
-<li>Optimization is used to build the schedule!</li>
+<li><strong>Optimization is used to build the schedule</strong>, using the same type of formulation.</li>
 <li>Finer Model:<ul>
-<li>Transportation of the teams needs to be taken into account</li>
-<li>Maximize television values, while being fair to the teams.</li>
+<li><strong>Transportation</strong> of the teams needs to be taken into account</li>
+<li>Maximize television earnings, while being <strong>fair</strong> to the teams.</li>
 </ul>
 </li>
 </ul>
@@ -13054,7 +13088,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Thank-you!">Thank you!<a class="anchor-link" href="#Thank-you!">&#182;</a></h1><p>This presentation is available at <a href="">https://github.com/sebmart/optimization_jump_julia</a>. The notebook contains a lot of additional material and links to learn more about Julia if you are interested.</p>
+<h1 id="Thank-you!">Thank you!<a class="anchor-link" href="#Thank-you!">&#182;</a></h1><p>This presentation is available at <strong><a href="sebmart.github.io/ssac2018">sebmart.github.io/ssac2018</a></strong>. The notebook contains a lot of additional material and links to learn more about Julia if you are interested.</p>
 <table>
 <tr>
 <td> <a href="http://www.sloansportsconference.com"><img src="figures/ssac.jpg" alt="SSAC" style="max-height: 150px;"/> </a></td>
@@ -13062,7 +13096,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
  <td> <a href="https://github.com/JuliaOpt/JuMP.jl"><img src="figures/jump.png" alt="IJulia" style="max-height: 150px;"/></a></td>
 <td> <a href="http://jupyter.org"><img src="figures/jupyter.png" alt="Jupyter" style="max-height: 150px;"/></a></td>
 </tr></table><h3 id="Sebastien-Martin"><em>Sebastien Martin</em><a class="anchor-link" href="#Sebastien-Martin">&#182;</a></h3><p>PhD Candidate in Operations Research, MIT Sloan.</p>
-<p><em>Website</em>: <strong><a href="http://sebmart.github.io">http://sebmart.github.io</a></strong></p>
+<p><strong><a href="http://sebmart.github.io">http://sebmart.github.io</a></strong></p>
 
 </div>
 </div>
@@ -13282,7 +13316,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[179]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span>
@@ -13297,7 +13331,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[179]:</div>
+<div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -13313,7 +13347,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">sin</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">)</span><span class="o">+</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
@@ -13328,7 +13362,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[180]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -13354,7 +13388,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[181]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
@@ -13372,7 +13406,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[181]:</div>
+<div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -13398,7 +13432,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">if</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="mi">10</span>
@@ -13430,7 +13464,7 @@ Best objective 1.177767000000e+06, best bound 1.177884000000e+06, gap 0.0099%
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[183]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
@@ -13467,7 +13501,7 @@ Why, hello!
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">3</span>
@@ -13524,7 +13558,7 @@ Why, hello!
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -13539,7 +13573,7 @@ Why, hello!
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[185]:</div>
+<div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -13568,7 +13602,7 @@ Why, hello!
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[186]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">myList</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -13583,7 +13617,7 @@ Why, hello!
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[186]:</div>
+<div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -13599,7 +13633,7 @@ Why, hello!
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">myList</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span> 
@@ -13615,7 +13649,7 @@ Why, hello!
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[187]:</div>
+<div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -13644,7 +13678,7 @@ Why, hello!
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span>
@@ -13663,7 +13697,7 @@ Why, hello!
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[188]:</div>
+<div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -13692,7 +13726,7 @@ Why, hello!
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[189]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">A</span><span class="o">^-</span><span class="mi">1</span> <span class="c">#inverse</span>
@@ -13709,7 +13743,7 @@ Why, hello!
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[189]:</div>
+<div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -13728,7 +13762,7 @@ Why, hello!
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[190]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">A</span><span class="o">*</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -13743,7 +13777,7 @@ Why, hello!
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[190]:</div>
+<div class="prompt output_prompt">Out[49]:</div>
 
 
 
@@ -13762,7 +13796,7 @@ Why, hello!
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[191]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">eigenValues</span><span class="p">,</span> <span class="n">eigenVectors</span> <span class="o">=</span> <span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
@@ -13778,7 +13812,7 @@ Why, hello!
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[191]:</div>
+<div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -13810,7 +13844,7 @@ Why, hello!
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[192]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">binomial_rv</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
@@ -13837,7 +13871,7 @@ Why, hello!
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[194]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">countTo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -13866,9 +13900,9 @@ Why, hello!
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>First use: slow like a dynamic language
-  0.006927 seconds (1.00 k allocations: 53.019 KiB)
+  0.003391 seconds (1.08 k allocations: 59.079 KiB)
 Second use: compiled and optimized automatically
-  0.000002 seconds (5 allocations: 176 bytes)
+  0.000003 seconds (5 allocations: 176 bytes)
 </pre>
 </div>
 </div>
@@ -13890,7 +13924,7 @@ Second use: compiled and optimized automatically
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[195]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -13905,7 +13939,7 @@ Second use: compiled and optimized automatically
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[195]:</div>
+<div class="prompt output_prompt">Out[53]:</div>
 
 
 
@@ -13921,7 +13955,7 @@ Second use: compiled and optimized automatically
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
@@ -13936,7 +13970,7 @@ Second use: compiled and optimized automatically
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[196]:</div>
+<div class="prompt output_prompt">Out[54]:</div>
 
 
 
@@ -13952,7 +13986,7 @@ Second use: compiled and optimized automatically
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[197]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">)</span>
@@ -13967,7 +14001,7 @@ Second use: compiled and optimized automatically
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[197]:</div>
+<div class="prompt output_prompt">Out[55]:</div>
 
 
 
@@ -13994,7 +14028,7 @@ Second use: compiled and optimized automatically
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[198]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="mi">1</span><span class="o">//</span><span class="mi">2</span> <span class="c"># fraction in Julia</span>
@@ -14009,7 +14043,7 @@ Second use: compiled and optimized automatically
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[198]:</div>
+<div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -14025,7 +14059,7 @@ Second use: compiled and optimized automatically
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[199]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="mi">1</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
@@ -14040,7 +14074,7 @@ Second use: compiled and optimized automatically
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[199]:</div>
+<div class="prompt output_prompt">Out[57]:</div>
 
 
 
@@ -14056,7 +14090,7 @@ Second use: compiled and optimized automatically
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[200]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
@@ -14071,7 +14105,7 @@ Second use: compiled and optimized automatically
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[200]:</div>
+<div class="prompt output_prompt">Out[58]:</div>
 
 
 
@@ -14087,7 +14121,7 @@ Second use: compiled and optimized automatically
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[201]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="c"># The same function gives different results depending on the type</span>
@@ -14102,7 +14136,7 @@ Second use: compiled and optimized automatically
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[201]:</div>
+<div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -14118,7 +14152,7 @@ Second use: compiled and optimized automatically
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[202]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">(</span><span class="nb">im</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">im</span><span class="p">)</span> <span class="c"># This also works with complex numbers</span>
@@ -14133,7 +14167,7 @@ Second use: compiled and optimized automatically
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[202]:</div>
+<div class="prompt output_prompt">Out[60]:</div>
 
 
 
@@ -14149,7 +14183,7 @@ Second use: compiled and optimized automatically
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[203]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">myFunction</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -14200,7 +14234,7 @@ Default output
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@code_llvm</span> <span class="mi">2</span><span class="o">*</span><span class="mi">5</span>
@@ -14265,7 +14299,7 @@ top:
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[205]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="mi">2</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
@@ -14321,7 +14355,7 @@ Stacktrace:
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[206]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">expo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
@@ -14352,7 +14386,7 @@ Stacktrace:
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[207]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@code_llvm</span> <span class="o">^</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
@@ -14396,7 +14430,7 @@ top:
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[208]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nd">@code_llvm</span> <span class="n">expo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
@@ -14415,7 +14449,7 @@ top:
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-define { i8**, i8 } @julia_expo_70565([8 x i8]* noalias nocapture, i64, i64) #0 !dbg !5 {
+define { i8**, i8 } @julia_expo_66702([8 x i8]* noalias nocapture, i64, i64) #0 !dbg !5 {
 top:
   %3 = icmp slt i64 %2, 1
   br i1 %3, label %L5, label %if
@@ -14444,7 +14478,7 @@ post_union_move3:                                 ; preds = %L19, %if
   ret { i8**, i8 } %merge
 
 if10:                                             ; preds = %L5
-  call void @jl_throw(i8** inttoptr (i64 4604247936 to i8**))
+  call void @jl_throw(i8** inttoptr (i64 4429365120 to i8**))
   unreachable
 
 L19:                                              ; preds = %L5
@@ -14475,7 +14509,7 @@ L19:                                              ; preds = %L5
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[209]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="c"># list comprehensions (similar to Python)</span>
@@ -14490,7 +14524,7 @@ L19:                                              ; preds = %L5
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[209]:</div>
+<div class="prompt output_prompt">Out[67]:</div>
 
 
 
@@ -14511,7 +14545,7 @@ L19:                                              ; preds = %L5
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[210]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">sumEvenSquares</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">i</span><span class="o">^</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="c"># summing over an iterator</span>
@@ -14526,7 +14560,7 @@ L19:                                              ; preds = %L5
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[210]:</div>
+<div class="prompt output_prompt">Out[68]:</div>
 
 
 
@@ -14581,7 +14615,7 @@ L19:                                              ; preds = %L5
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[211]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="o">?</span><span class="n">eig</span>
@@ -14606,7 +14640,7 @@ L19:                                              ; preds = %L5
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[211]:</div>
+<div class="prompt output_prompt">Out[70]:</div>
 
 
 <div class="output_markdown rendered_html output_subarea output_execute_result">
@@ -14684,7 +14718,7 @@ Click on the link to see the Julia source code.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[213]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">methods</span><span class="p">(</span><span class="n">sin</span><span class="p">)</span>
@@ -14699,11 +14733,11 @@ Click on the link to see the Julia source code.</p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[213]:</div>
+<div class="prompt output_prompt">Out[72]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-21 methods for generic function <b>sin</b>:<ul><li> sin(x::<b>Float64</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L419" target="_blank">math.jl:419</a></li> <li> sin(x::<b>Float32</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L420" target="_blank">math.jl:420</a></li> <li> sin(a::<b>Float16</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L950" target="_blank">math.jl:950</a></li> <li> sin(a::<b>Complex{Float16}</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L951" target="_blank">math.jl:951</a></li> <li> sin(x::<b>BigFloat</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/mpfr.jl#L637" target="_blank">mpfr.jl:637</a></li> <li> sin(::<b>DataArrays.NAtype</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L313" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:313</a></li> <li> sin(::<b>JuMP.Variable</b>) at <a href="https://github.com/JuliaOpt/JuMP.jl/tree/ec30d38cc95b6f114ea136972920000f03834657//src/operators.jl#L630" target="_blank">/Users/semartin/.julia/v0.6/JuMP/src/operators.jl:630</a></li> <li> sin(::<b>JuMP.GenericAffExpr{Float64,JuMP.Variable}</b>) at <a href="https://github.com/JuliaOpt/JuMP.jl/tree/ec30d38cc95b6f114ea136972920000f03834657//src/operators.jl#L630" target="_blank">/Users/semartin/.julia/v0.6/JuMP/src/operators.jl:630</a></li> <li> sin(::<b>JuMP.GenericQuadExpr{Float64,JuMP.Variable}</b>) at <a href="https://github.com/JuliaOpt/JuMP.jl/tree/ec30d38cc95b6f114ea136972920000f03834657//src/operators.jl#L630" target="_blank">/Users/semartin/.julia/v0.6/JuMP/src/operators.jl:630</a></li> <li> sin<i>{T}</i>(z::<b>Complex{T}</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/complex.jl#L688" target="_blank">complex.jl:688</a></li> <li> sin<i>{T}</i>(d::<b>ForwardDiff.Dual{T,V,N} where N where V<:Real</b>) at <a href="https://github.com/JuliaDiff/ForwardDiff.jl/tree/d41e65274f09d18d2bf450d99e0369075e0fbb2a//src/dual.jl#L163" target="_blank">/Users/semartin/.julia/v0.6/ForwardDiff/src/dual.jl:163</a></li> <li> sin(x::<b>Real</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L421" target="_blank">math.jl:421</a></li> <li> sin(A::<b>SparseMatrixCSC</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/deprecated.jl#L56" target="_blank">deprecated.jl:56</a></li> <li> sin<i>{Ti<:Integer, Tv<:Number}</i>(x::<b>AbstractSparseArray{Tv,Ti,1}</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/sparse/sparsevector.jl#L1015" target="_blank">sparse/sparsevector.jl:1015</a></li> <li> sin<i>{T<:AbstractFloat}</i>(d::<b>DataArrays.DataArray{T,N} where N</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L80" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:80</a></li> <li> sin<i>{T<:Real}</i>(d::<b>DataArrays.DataArray{T,N} where N</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L80" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:80</a></li> <li> sin<i>{T<:AbstractFloat}</i>(adv::<b>DataArrays.AbstractDataArray{T,N} where N</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L90" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:90</a></li> <li> sin<i>{T<:Real}</i>(adv::<b>DataArrays.AbstractDataArray{T,N} where N</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L90" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:90</a></li> <li> sin<i>{T<:Number}</i>(x::<b>AbstractArray{T,N} where N</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/deprecated.jl#L56" target="_blank">deprecated.jl:56</a></li> <li> sin(l1::<b>Lazy.List</b>, ls::<b>Lazy.List...</b>) at <a href="https://github.com/MikeInnes/Lazy.jl/tree/64124ae960a0249ddaa4a51f821699bfedb0232a//src/Lazy.jl#L24" target="_blank">/Users/semartin/.julia/v0.6/Lazy/src/Lazy.jl:24</a></li> <li> sin<i>{T}</i>(a::<b>DataValues.DataValue{T}</b>) at <a href="https://github.com/davidanthoff/DataValues.jl/tree/45e1c18ebf1ecaa09272d114384f009a843c0322//src/scalar/operations.jl#L31" target="_blank">/Users/semartin/.julia/v0.6/DataValues/src/scalar/operations.jl:31</a></li> </ul>
+21 methods for generic function <b>sin</b>:<ul><li> sin(x::<b>Float64</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L419" target="_blank">math.jl:419</a></li> <li> sin(x::<b>Float32</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L420" target="_blank">math.jl:420</a></li> <li> sin(a::<b>Float16</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L950" target="_blank">math.jl:950</a></li> <li> sin(a::<b>Complex{Float16}</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L951" target="_blank">math.jl:951</a></li> <li> sin(x::<b>BigFloat</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/mpfr.jl#L637" target="_blank">mpfr.jl:637</a></li> <li> sin(::<b>DataArrays.NAtype</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L313" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:313</a></li> <li> sin(::<b>JuMP.Variable</b>) at <a href="https://github.com/JuliaOpt/JuMP.jl/tree/ec30d38cc95b6f114ea136972920000f03834657//src/operators.jl#L630" target="_blank">/Users/semartin/.julia/v0.6/JuMP/src/operators.jl:630</a></li> <li> sin(::<b>JuMP.GenericAffExpr{Float64,JuMP.Variable}</b>) at <a href="https://github.com/JuliaOpt/JuMP.jl/tree/ec30d38cc95b6f114ea136972920000f03834657//src/operators.jl#L630" target="_blank">/Users/semartin/.julia/v0.6/JuMP/src/operators.jl:630</a></li> <li> sin(::<b>JuMP.GenericQuadExpr{Float64,JuMP.Variable}</b>) at <a href="https://github.com/JuliaOpt/JuMP.jl/tree/ec30d38cc95b6f114ea136972920000f03834657//src/operators.jl#L630" target="_blank">/Users/semartin/.julia/v0.6/JuMP/src/operators.jl:630</a></li> <li> sin<i>{T}</i>(z::<b>Complex{T}</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/complex.jl#L688" target="_blank">complex.jl:688</a></li> <li> sin<i>{T}</i>(d::<b>ForwardDiff.Dual{T,V,N} where N where V<:Real</b>) at <a href="https://github.com/JuliaDiff/ForwardDiff.jl/tree/d41e65274f09d18d2bf450d99e0369075e0fbb2a//src/dual.jl#L163" target="_blank">/Users/semartin/.julia/v0.6/ForwardDiff/src/dual.jl:163</a></li> <li> sin(x::<b>Real</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/math.jl#L421" target="_blank">math.jl:421</a></li> <li> sin(A::<b>SparseMatrixCSC</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/deprecated.jl#L56" target="_blank">deprecated.jl:56</a></li> <li> sin<i>{Ti<:Integer, Tv<:Number}</i>(x::<b>AbstractSparseArray{Tv,Ti,1}</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/sparse/sparsevector.jl#L1015" target="_blank">sparse/sparsevector.jl:1015</a></li> <li> sin<i>{T<:AbstractFloat}</i>(d::<b>DataArrays.DataArray{T,N} where N</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L80" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:80</a></li> <li> sin<i>{T<:Real}</i>(d::<b>DataArrays.DataArray{T,N} where N</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L80" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:80</a></li> <li> sin<i>{T<:AbstractFloat}</i>(adv::<b>DataArrays.AbstractDataArray{T,N} where N</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L90" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:90</a></li> <li> sin<i>{T<:Real}</i>(adv::<b>DataArrays.AbstractDataArray{T,N} where N</b>) at <a href="https://github.com/JuliaStats/DataArrays.jl/tree/78327d1e6a8cd27c44d9afbaec419caf6a98893c//src/operators.jl#L90" target="_blank">/Users/semartin/.julia/v0.6/DataArrays/src/operators.jl:90</a></li> <li> sin<i>{T<:Number}</i>(x::<b>AbstractArray{T,N} where N</b>) at <a href="https://github.com/JuliaLang/julia/tree/d386e40c17d43b79fc89d3e579fc04547241787c/base/deprecated.jl#L56" target="_blank">deprecated.jl:56</a></li> <li> sin<i>{T}</i>(a::<b>DataValues.DataValue{T}</b>) at <a href="https://github.com/davidanthoff/DataValues.jl/tree/45e1c18ebf1ecaa09272d114384f009a843c0322//src/scalar/operations.jl#L31" target="_blank">/Users/semartin/.julia/v0.6/DataValues/src/scalar/operations.jl:31</a></li> <li> sin(l1::<b>Lazy.List</b>, ls::<b>Lazy.List...</b>) at <a href="https://github.com/MikeInnes/Lazy.jl/tree/64124ae960a0249ddaa4a51f821699bfedb0232a//src/Lazy.jl#L24" target="_blank">/Users/semartin/.julia/v0.6/Lazy/src/Lazy.jl:24</a></li> </ul>
 </div>
 
 </div>
@@ -14732,7 +14766,7 @@ Click on the link to see the Julia source code.</p>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[214]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
@@ -14750,7 +14784,7 @@ Click on the link to see the Julia source code.</p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[214]:</div>
+<div class="prompt output_prompt">Out[73]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14872,7 +14906,7 @@ Click on the link to see the Julia source code.</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[215]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="p">;</span><span class="n">ls</span>
@@ -14918,7 +14952,7 @@ optimization_jump_julia.slides.html
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[216]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="nb">π</span>
@@ -14933,7 +14967,7 @@ optimization_jump_julia.slides.html
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[216]:</div>
+<div class="prompt output_prompt">Out[75]:</div>
 
 
 
@@ -14949,7 +14983,7 @@ optimization_jump_julia.slides.html
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[217]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-julia"><pre><span></span><span class="s">&quot;carrot&quot;</span> <span class="o">∈</span> <span class="p">[</span><span class="s">&quot;potato&quot;</span><span class="p">,</span> <span class="s">&quot;tomato&quot;</span><span class="p">,</span> <span class="s">&quot;carrot&quot;</span><span class="p">]</span>
@@ -14964,7 +14998,7 @@ optimization_jump_julia.slides.html
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[217]:</div>
+<div class="prompt output_prompt">Out[76]:</div>
 
 
 
